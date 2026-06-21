@@ -9,22 +9,20 @@
     --card-bg: rgba(255, 255, 255, 0.95);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
+.not-found-wrapper {
     font-family: 'Inter', 'Noto Sans JP', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-dark);
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
 }
 
 /* Subtle Japanese Pattern Background */
