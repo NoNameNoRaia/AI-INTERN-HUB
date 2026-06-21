@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  metadataBase: new URL("https://ai-intern-hub.com"),
+  metadataBase: new URL("https://aiinternhub.27netteam.top"),
   title: "AI INTERN HUB - Nền tảng kết nối Sinh viên – Doanh nghiệp – AI Phỏng vấn",
   description: "Nền tảng kết nối Sinh viên – Doanh nghiệp – AI Phỏng vấn, giúp sinh viên tìm thực tập, tạo CV và phỏng vấn thử bằng Trí Tuệ Nhân Tạo.",
   keywords: ["thực tập", "sinh viên", "doanh nghiệp", "AI phỏng vấn", "tạo CV", "việc làm", "AI Intern Hub"],
@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: "AI INTERN HUB - Nền tảng kết nối Sinh viên – Doanh nghiệp – AI Phỏng vấn",
     description: "Nền tảng giúp sinh viên tìm kiếm cơ hội thực tập, tạo CV chuyên nghiệp và trải nghiệm hệ thống phỏng vấn giả lập bằng AI tiên tiến nhất.",
-    url: "https://ai-intern-hub.com",
+    url: "https://aiinternhub.27netteam.top",
     siteName: "AI Intern Hub",
     images: [
       {

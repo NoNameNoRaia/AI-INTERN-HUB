@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = "https://ai-intern-hub.com";
+  const baseUrl = "https://aiinternhub.27netteam.top";
   
   return [
     {

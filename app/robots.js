@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: ['/private/', '/api/'], // Chặn index các trang nội bộ hoặc api
     },
-    sitemap: 'https://ai-intern-hub.com/sitemap.xml',
+    sitemap: 'https://aiinternhub.27netteam.top/sitemap.xml',
   }
 }
