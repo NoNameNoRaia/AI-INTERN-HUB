@@ -1,8 +1,37 @@
 import "./globals.css";
 
 export const metadata = {
+  metadataBase: new URL("https://ai-intern-hub.com"),
   title: "AI INTERN HUB - Nền tảng kết nối Sinh viên – Doanh nghiệp – AI Phỏng vấn",
   description: "Nền tảng kết nối Sinh viên – Doanh nghiệp – AI Phỏng vấn, giúp sinh viên tìm thực tập, tạo CV và phỏng vấn thử bằng Trí Tuệ Nhân Tạo.",
+  keywords: ["thực tập", "sinh viên", "doanh nghiệp", "AI phỏng vấn", "tạo CV", "việc làm", "AI Intern Hub"],
+  authors: [{ name: "AI Intern Hub" }],
+  openGraph: {
+    title: "AI INTERN HUB - Nền tảng kết nối Sinh viên – Doanh nghiệp – AI Phỏng vấn",
+    description: "Nền tảng giúp sinh viên tìm kiếm cơ hội thực tập, tạo CV chuyên nghiệp và trải nghiệm hệ thống phỏng vấn giả lập bằng AI tiên tiến nhất.",
+    url: "https://ai-intern-hub.com",
+    siteName: "AI Intern Hub",
+    images: [
+      {
+        url: "/images/thurm.png",
+        width: 1200,
+        height: 630,
+        alt: "AI INTERN HUB Thumbnail",
+      },
+    ],
+    locale: "vi_VN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI INTERN HUB - Nền tảng kết nối Sinh viên – Doanh nghiệp – AI Phỏng vấn",
+    description: "Khám phá cơ hội thực tập và chuẩn bị tương lai nghề nghiệp cùng AI Intern Hub.",
+    images: ["/images/thurm.png"],
+  },
+  icons: {
+    icon: '/images/logo.png',
+    apple: '/images/logo.png',
+  },
 };
 
 export default function RootLayout({ children }) {

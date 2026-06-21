@@ -196,7 +196,7 @@ export default function HomePage() {
 
             <div className="intro-brand">
                 <span className="intro-brand-ai">AI</span>
-                <span className="intro-brand-text">INTERN HUB</span>
+                <span className="intro-brand-text">INTERN <span className="text-red">HUB</span></span>
             </div>
 
             <div className="intro-tagline">
