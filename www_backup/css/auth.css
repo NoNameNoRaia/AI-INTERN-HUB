@@ -1,0 +1,436 @@
+/* =========================================
+   AUTHENTICATION PAGE STYLES
+========================================= */
+
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    padding: 20px;
+    z-index: 10;
+}
+
+.back-home {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color var(--transition-fast), transform var(--transition-fast);
+    z-index: 20;
+    background: rgba(255,255,255,0.7);
+    padding: 10px 16px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.back-home svg {
+    width: 20px;
+    height: 20px;
+}
+
+.back-home:hover {
+    color: var(--primary-red);
+    transform: translateX(-4px);
+}
+
+.auth-container {
+    background-color: var(--card-bg);
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+    width: 900px;
+    max-width: 100%;
+    min-height: 550px;
+    display: flex;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Forms Container */
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.auth-container.right-panel-active .sign-in-container {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.sign-up-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.auth-container.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+}
+
+@keyframes show {
+    0%, 49.99% { opacity: 0; z-index: 1; }
+    50%, 100% { opacity: 1; z-index: 5; }
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.form-logo {
+    margin-bottom: 20px;
+}
+
+.form-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+form h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+form .subtitle {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 24px;
+}
+
+.social-container {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #f1f5f9;
+    transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.social:hover {
+    transform: translateY(-2px);
+    background-color: #e2e8f0;
+}
+
+.social svg {
+    width: 20px;
+    height: 20px;
+}
+
+.divider {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 25%;
+    height: 1px;
+    background-color: #e2e8f0;
+}
+
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+.input-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.input-group svg {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: #94a3b8;
+    pointer-events: none;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 16px 14px 44px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    transition: all var(--transition-fast);
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    box-shadow: 0 0 0 3px rgba(230, 0, 18, 0.1);
+    background-color: #ffffff;
+}
+
+.forgot-pass {
+    align-self: flex-end;
+    font-size: 0.85rem;
+    color: var(--primary-red);
+    text-decoration: none;
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.forgot-pass:hover {
+    text-decoration: underline;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    margin-top: 8px;
+}
+
+.mobile-toggle {
+    display: none;
+    margin-top: 24px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.mobile-toggle a {
+    color: var(--primary-red);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* =========================================
+   OVERLAY PANELS (Sliding Magic)
+========================================= */
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.auth-container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+
+.overlay {
+    background: linear-gradient(135deg, var(--primary-red) 0%, #FF4D4D 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #ffffff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.auth-container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+    transform: translateX(-20%);
+}
+
+.auth-container.right-panel-active .overlay-left {
+    transform: translateX(0);
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.auth-container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+}
+
+.overlay-panel h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.overlay-panel p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.overlay-btn {
+    border-color: rgba(255,255,255,0.5);
+    color: #ffffff;
+    padding: 12px 32px;
+    border-radius: 100px;
+}
+
+.overlay-btn:hover {
+    background-color: #ffffff;
+    color: var(--primary-red);
+}
+
+/* Abstract Graphics inside Overlay */
+.overlay-graphic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.circle-sm, .circle-md {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.circle-sm {
+    width: 150px;
+    height: 150px;
+    top: -30px;
+    left: -30px;
+}
+
+.circle-md {
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    right: -50px;
+}
+
+.circle-sm.right {
+    top: auto;
+    bottom: -30px;
+    right: -30px;
+    left: auto;
+}
+
+.circle-md.right {
+    top: -100px;
+    left: -50px;
+    bottom: auto;
+    right: auto;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+@media (max-width: 768px) {
+    .auth-container {
+        min-height: auto;
+        padding: 40px 0;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    .sign-in-container {
+        position: relative;
+    }
+
+    .sign-up-container {
+        display: none;
+        position: relative;
+        opacity: 1;
+        z-index: 5;
+    }
+
+    /* On mobile, we hide the overlay sliding mechanism and just toggle views */
+    .overlay-container {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+    
+    .auth-container.right-panel-active .sign-in-container {
+        display: none;
+    }
+    
+    .auth-container.right-panel-active .sign-up-container {
+        display: flex;
+        transform: none;
+    }
+}
