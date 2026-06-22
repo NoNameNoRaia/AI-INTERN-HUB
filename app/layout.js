@@ -1,3 +1,4 @@
+import CustomCursor from "./CustomCursor";
 import "./globals.css";
 
 export const metadata = {
@@ -50,6 +51,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <CustomCursor />
         {children}
       </body>
     </html>

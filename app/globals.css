@@ -1,1 +1,32 @@
 @import "./css/style.css";
+
+/* Custom Cursor CSS */
+@media (pointer: fine) {
+    body, a, button, input, select, textarea, [role="button"], .card, .btn {
+        cursor: none !important;
+    }
+}
+
+.custom-cursor-blend {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 999999;
+    mix-blend-mode: difference;
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.custom-cursor-blend.hover {
+    width: 64px;
+    height: 64px;
+}
+
+@media (pointer: coarse) {
+    .custom-cursor-blend {
+        display: none !important;
+    }
+}
